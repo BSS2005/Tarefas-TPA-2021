@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class VetorArmazenarAB {
+	public static void main(String[] args) {
+		Scanner in = new Scanner (System.in);
+		int a[], i, contpar=0, contimpar=0;
+		a = new int[20];
+		
+		for (i=0; i<20; i++) {
+			System.out.println("Entre com o "+(i+1)+"� n�mero");
+			a[i] = in.nextInt();
+			
+			if (a[i]%2==0) {
+				contpar++;
+			}else {
+				contimpar++;
+			}
+		}
+		System.out.println("Pares = "+contpar+"Impares = "+contimpar);
+		int par[], impar[];
+		par = new int [contpar];
+		impar = new int [contimpar];
+		
+		for (i=0; i<20; i++) {
+			if (a[i]%2 == 0) {
+				par[ipar] = a[i];
+				ipar++;
+			}else {
+				impar[iimpar] = a[i];
+				iimpar++;
+			}
+		}
+		System.out.print("[");
+		for(i=0; i<20; i++) {
+			System.out.print(a[i]+ " ");
+		}
+		System.out.print("]");
+		System.out.println();
+		
+		System.out.println("[");
+		for(i=0; i<contpar; i++) {
+			System.out.print(par[i]+" ");
+		}
+		System.out.print("]");
+	}
+
+}
